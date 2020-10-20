@@ -2,9 +2,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UserResgistration_LambdaExpression;
 namespace MSTesting
 {
+    /// <summary>
+    /// Test class for ms testing.
+    /// </summary>
     [TestClass]
     public class UnitTest1
     {
+        /// <summary>
+        /// Tests the name.
+        /// </summary>
         [TestMethod]
         public void TestName()
         {
@@ -14,8 +20,10 @@ namespace MSTesting
             bool actual = Program.ValidateFirstName("Kartikeya");
             //Assert
             Assert.AreEqual(expected, actual);
-
         }
+        /// <summary>
+        /// Tests the email.
+        /// </summary>
         [TestMethod]
         public void TestEmail()
         {
@@ -25,8 +33,10 @@ namespace MSTesting
             bool actual = Program.ValidateEmail("kartikeya.kumar@capgemini.com");
             //Assert
             Assert.AreEqual(expected, actual);
-
         }
+        /// <summary>
+        /// Tests the mobile number.
+        /// </summary>
         [TestMethod]
         public void TestMobileNum()
         {
@@ -36,8 +46,10 @@ namespace MSTesting
             bool actual = Program.ValidateMobileNum("91 7206183244");
             //Assert
             Assert.AreEqual(expected, actual);
-
         }
+        /// <summary>
+        /// Tests the password.
+        /// </summary>
         [TestMethod]
         public void TestPassword()
         {
@@ -48,6 +60,11 @@ namespace MSTesting
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// Tests the valid multiple email id.
+        /// </summary>
+        /// <param name="expected">if set to <c>true</c> [expected].</param>
+        /// <param name="email">The email.</param>
         [DataTestMethod]
         [DataRow(true, "abc@yahoo.com")]
         [DataRow(true, "abc-100@yahoo.com")]
